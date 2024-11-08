@@ -4,7 +4,7 @@ import SravniSDK
 class ViewController: UIViewController {
     
     var key = ""
-    var phoneNumber = "79633426767"
+    var phoneNumber = ""
     
     lazy var sdk = Sravni.SDK(configuration: .init(key: key, phoneNumber: phoneNumber))
     
@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         
         keyTextField.attributedPlaceholder = NSAttributedString(string: "SDK Key", attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)])
         keyTextField.text = key
-        keyTextField.textColor = UIColor.black.withAlphaComponent(0.3)
+        keyTextField.autocapitalizationType = .none
+        keyTextField.textColor = .black
         keyTextField.font = .systemFont(ofSize: 16)
-        keyTextField.isEnabled = false
         view.addSubview(keyTextField)
         
         phoneBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
@@ -36,6 +36,8 @@ class ViewController: UIViewController {
 
         phoneTextField.attributedPlaceholder = NSAttributedString(string: "Phone number", attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)])
         phoneTextField.text = phoneNumber
+        phoneTextField.autocapitalizationType = .none
+        phoneTextField.keyboardType = .numberPad
         phoneTextField.textColor = .black
         phoneTextField.font = .systemFont(ofSize: 16)
         phoneTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
