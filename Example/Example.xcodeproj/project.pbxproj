@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F97DF6932CDDEE840018EA73 /* SravniSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F97DF6922CDDEE840018EA73 /* SravniSDK */; };
+		F9C4BE712CE5E0A0004E1AD3 /* SravniSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F9C4BE702CE5E0A0004E1AD3 /* SravniSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F97DF6932CDDEE840018EA73 /* SravniSDK in Frameworks */,
+				F9C4BE712CE5E0A0004E1AD3 /* SravniSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				F97DF6922CDDEE840018EA73 /* SravniSDK */,
+				F9C4BE702CE5E0A0004E1AD3 /* SravniSDK */,
 			);
 			productName = Example;
 			productReference = F97DF64F2CDDE99F0018EA73 /* Example.app */;
@@ -114,7 +114,7 @@
 			mainGroup = F97DF6462CDDE99F0018EA73;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F97DF6912CDDEE840018EA73 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */,
+				F9C4BE6F2CE5E0A0004E1AD3 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F97DF6502CDDE99F0018EA73 /* Products */;
@@ -154,6 +154,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PHWSRY24JP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -161,6 +162,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -181,6 +183,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PHWSRY24JP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -188,6 +191,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -253,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -310,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -344,7 +348,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F97DF6912CDDEE840018EA73 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */ = {
+		F9C4BE6F2CE5E0A0004E1AD3 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sravni/IOSSravniSDK.git";
 			requirement = {
@@ -355,9 +359,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F97DF6922CDDEE840018EA73 /* SravniSDK */ = {
+		F9C4BE702CE5E0A0004E1AD3 /* SravniSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F97DF6912CDDEE840018EA73 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */;
+			package = F9C4BE6F2CE5E0A0004E1AD3 /* XCRemoteSwiftPackageReference "IOSSravniSDK" */;
 			productName = SravniSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

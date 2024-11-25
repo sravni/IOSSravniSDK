@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     let startButton = UIButton(type: .custom)
     let keyTextField = UITextField()
     let phoneTextField = UITextField()
+    
+    let statusLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         keyTextField.autocapitalizationType = .none
         keyTextField.textColor = .black
         keyTextField.font = .systemFont(ofSize: 16)
+        keyTextField.isUserInteractionEnabled = false
         view.addSubview(keyTextField)
         
         phoneBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
@@ -51,6 +54,10 @@ class ViewController: UIViewController {
         startButton.addTarget(self, action: #selector(startAction(_:)), for: .touchUpInside)
         view.addSubview(startButton)
         
+        statusLabel.textColor = .systemGreen
+        statusLabel.font = .systemFont(ofSize: 16, weight: .semibold)
+        view.addSubview(statusLabel)
+
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
         view.addGestureRecognizer(gestureRecognizer)
     }
@@ -63,6 +70,13 @@ class ViewController: UIViewController {
             width: view.bounds.width - 32,
             height: 56
         )
+        statusLabel.frame = CGRect(
+            x: 16,
+            y: startButton.frame.origin.y + 56 + 16,
+            width: view.bounds.width - 32,
+            height: 30
+        )
+
         phoneBackgroundView.frame = CGRect(
             x: 16,
             y: startButton.frame.origin.y - 60 - 16,
@@ -82,7 +96,9 @@ class ViewController: UIViewController {
     @objc
     func startAction(_ sender: UIButton) {
         sdk.set(phoneNumber: phoneNumber)
-        sdk.start(with: navigationController!)
+        sdk.start(with: navigationController!) { [weak self] result in
+            self?.statusLabel.text = "COMPLETION STATUS: \(result.description)"
+        }
     }
     
     @objc
