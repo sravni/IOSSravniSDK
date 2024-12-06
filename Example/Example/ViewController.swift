@@ -6,7 +6,12 @@ class ViewController: UIViewController {
     var key = ""
     var phoneNumber = ""
     
-    lazy var sdk = Sravni.SDK(configuration: .init(key: key, phoneNumber: phoneNumber))
+    lazy var sdk = SravniManager(
+        configuration: .init(key: key, phoneNumber: phoneNumber)
+    ) { [weak self] result in
+        self?.statusLabel.textColor = result == .finished ? .systemGreen : .systemRed
+        self?.statusLabel.text = "COMPLETION STATUS: \(result.description)"
+    }
     
     let keyBackgroundView = UIView()
     let phoneBackgroundView = UIView()
@@ -14,13 +19,22 @@ class ViewController: UIViewController {
     let startButton = UIButton(type: .custom)
     let keyTextField = UITextField()
     let phoneTextField = UITextField()
-    
+    let presentSwitch = UISwitch()
+    let presentStyleLabel = UILabel()
+
     let statusLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        view.addSubview(presentSwitch)
+        
+        presentStyleLabel.text = "Presentation style"
+        presentStyleLabel.textColor = .lightGray
+        presentStyleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
+        view.addSubview(presentStyleLabel)
+
         keyBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         keyBackgroundView.layer.cornerRadius = 12
         view.addSubview(keyBackgroundView)
@@ -91,13 +105,26 @@ class ViewController: UIViewController {
         )
         phoneTextField.frame = phoneBackgroundView.frame.insetBy(dx: 8, dy: 8)
         keyTextField.frame = keyBackgroundView.frame.insetBy(dx: 8, dy: 8)
+        
+        presentSwitch.frame = CGRect(
+            x: keyBackgroundView.frame.origin.x,
+            y: keyBackgroundView.frame.origin.y - 40,
+            width: presentSwitch.bounds.width,
+            height: presentSwitch.bounds.height
+        )
+        presentStyleLabel.sizeToFit()
+        presentStyleLabel.center = presentSwitch.center
+        presentStyleLabel.frame.origin.x += presentSwitch.bounds.width + 55
     }
     
     @objc
     func startAction(_ sender: UIButton) {
         sdk.set(phoneNumber: phoneNumber)
-        sdk.start(with: navigationController!) { [weak self] result in
-            self?.statusLabel.text = "COMPLETION STATUS: \(result.description)"
+        let vc = sdk.createViewController()!
+        if presentSwitch.isOn {
+            present(vc, animated: true)
+        } else {
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
