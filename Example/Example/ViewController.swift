@@ -3,7 +3,7 @@ import SravniSDK
 
 class ViewController: UIViewController {
     
-    var key = ""
+    var key = "mobile.frontend"
     var phoneNumber = ""
     
     lazy var sdk = SravniManager(
