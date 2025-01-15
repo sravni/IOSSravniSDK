@@ -53,6 +53,6 @@ SDK будет возвращать через подключенный колб
 - **errorPartnerClientIdIsBlocked** - ключ SDK партнера заблокирован;
 - **errorUserIsBlocked** - пользователь забокирован;
 - **errorAuthError** - у пользователя нет прав доступа к содержимому;
-- **errorToManyRequests** - превышено количество запросов;
+- **errorTooManyRequests** - превышено количество запросов;
 - **finished** - флоу завершен пользователем.
 
