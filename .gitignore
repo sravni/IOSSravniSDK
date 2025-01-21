@@ -95,3 +95,5 @@ iOSInjectionProject/
 .swiftpm/
 .idea/
 .build/
+SravniSDK.xcframework
+SravniSDK.xcframework.zip
