@@ -11,7 +11,6 @@ Sravni SDK разработано специально для того, чтоб
   s.license          = { :type => 'Copyright', :text => 'Copyright 2025 Sravni' }
   s.author           = 'Sravni Team'
   s.swift_version    = '5.9'
-  s.static_framework = true
   s.source           = { :http => 'https://github.com/sravni/IOSSravniSDK/releases/download/1.0.78/SravniSDK.xcframework.zip' }
   s.ios.deployment_target = '14.0'
   s.ios.vendored_frameworks = 'SravniSDK.xcframework'
