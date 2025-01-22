@@ -20,7 +20,13 @@ Sravni SDK разработано специально для того, чтоб
 
 ### Подключение Sravni SDK
 
-Для подключения Sravni SDK подключите spm-пакет https://github.com/sravni/IOSSravniSDK.
+- С использованием SPM:
+
+    добавьте package https://github.com/sravni/IOSSravniSDK
+
+- С использованием CocoaPods:
+    
+    добавьте в podfile ```source 'https://github.com/sravni/IOSSravniSDK'``` и ```pod 'SravniSDK'```
 
 ### Запуск Sravni SDK
 Запуск процесса идет через создание объекта SravniManager с параметрами ключа активации API (запрашивается в sravni.ru) и номера телефона клиента: 
