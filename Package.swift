@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SravniSDK",
-            url: "https://github.com/sravni/IOSSravniSDK/releases/download/1.0.108/SravniSDK.xcframework.zip",
-            checksum: "6ceb3ebbf198b12359577d9c8e7934a2303f43c341003fcba077550b18149406"
+            url: "https://github.com/sravni/IOSSravniSDK/releases/download/1.0.109/SravniSDK.xcframework.zip",
+            checksum: "ede89156ebbb1ca9103e31961a0401950fd2fa6e251d3d94c061d606cb59a8c2"
         )
     ]
 )
