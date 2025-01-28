@@ -10,6 +10,5 @@ target 'Example' do
   use_frameworks!
 
   pod 'SravniSDK'
-  pod 'AppsFlyerFramework/Dynamic'
 
 end
