@@ -97,3 +97,5 @@ iOSInjectionProject/
 .build/
 SravniSDK.xcframework
 SravniSDK.xcframework.zip
+Pods
+Podfile.lock

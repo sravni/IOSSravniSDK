@@ -1,0 +1,15 @@
+source 'https://github.com/sravni/IOSSravniSDK'
+source 'https://cdn.cocoapods.org/'
+
+project 'Example.xcodeproj'
+
+platform :ios, '14.0'
+
+target 'Example' do
+
+  use_frameworks!
+
+  pod 'SravniSDK'
+  pod 'AppsFlyerFramework/Dynamic'
+
+end
