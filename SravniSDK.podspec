@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SravniSDK'
-  s.version          = '1.0.172'
+  s.version          = '1.0.173'
   s.summary          = 'SravniSDK'
   s.description      = <<-DESC
 Sravni SDK разработано специально для того, чтобы упростить интеграцию пользовательского флоу компании. Оно позволяет запускать его нативно, напрямую из родительского приложения, тем самым предоставляя конечным пользователям бесшовный доступ к сервису.
@@ -13,7 +13,7 @@ Sravni SDK разработано специально для того, чтоб
   s.swift_version    = '5.9'
   s.platform         = :ios, '14.0'
   s.requires_arc     = true
-  s.source           = { :http => 'https://github.com/sravni/IOSSravniSDK/releases/download/1.0.172/SravniSDK.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/sravni/IOSSravniSDK/releases/download/1.0.173/SravniSDK.xcframework.zip' }
   s.ios.deployment_target = '14.0'
   s.ios.vendored_frameworks = 'SravniSDK.xcframework'
 
