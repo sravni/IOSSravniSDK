@@ -13,7 +13,7 @@ Sravni SDK разработано специально для того, чтоб
   s.swift_version    = '5.9'
   s.platform         = :ios, '14.0'
   s.requires_arc     = true
-  s.source           = { :http => 'https://github.com/sravni/IOSSravniSDK/releases/download/#{s.version}/SravniSDK.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/sravni/IOSSravniSDK/releases/download/1.0.172/SravniSDK.xcframework.zip' }
   s.ios.deployment_target = '14.0'
   s.ios.vendored_frameworks = 'SravniSDK.xcframework'
 
