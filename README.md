@@ -32,7 +32,7 @@ Sravni SDK разработано специально для того, чтоб
 Запуск процесса идет через создание объекта SravniManager с параметрами ключа активации API (запрашивается в sravni.ru) и номера телефона клиента: 
  ```Swift
 SravniManager(
-    configuration: .init(key: <ключ ативации SDK>, phoneNumber: <номер телефона клиента>)
+    configuration: .init(key: <ключ ативации SDK>, phoneNumber: <номер телефона клиента>, sdkConfig: <конфиг для сдк>)
 ) { [weak self] result in
     // тут ваша обработка результата
   }

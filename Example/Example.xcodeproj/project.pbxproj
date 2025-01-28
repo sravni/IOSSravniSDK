@@ -177,7 +177,7 @@
 				F96C97EB2D3CCE3C00CAAFA7 /* XCRemoteSwiftPackageReference "libwebp-Xcode" */,
 				F96C97EE2D3CCE5A00CAAFA7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				F96C97F12D3CCE6F00CAAFA7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F97DF6502CDDE99F0018EA73 /* Products */;
@@ -525,7 +525,7 @@
 				minimumVersion = 5.2.0;
 			};
 		};
-		F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+		F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
 			requirement = {
@@ -583,7 +583,7 @@
 		};
 		F96C97FF2D3CCEBE00CAAFA7 /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			package = F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
