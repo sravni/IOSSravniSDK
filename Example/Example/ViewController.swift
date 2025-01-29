@@ -9,11 +9,7 @@ class ViewController: UIViewController {
 
     var sdkConfig = """
     {
-        "productName": "osago",
-        "data": { "cartype": "auto",
-        "carverified": true,
-        "havenumber": "true",
-        "number": "К 185 ЕК 797"}
+        "productName": "mfo"
     }
     """
 
