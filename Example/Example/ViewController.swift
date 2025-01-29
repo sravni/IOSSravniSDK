@@ -4,8 +4,7 @@ import SravniSDK
 class ViewController: UIViewController {
 
     var key = "mobile.frontend"
-    // var phoneNumber = "79060828289"
-    var phoneNumber = "79633428349"
+    var phoneNumber = "70000000000"
 
     var sdkConfig = """
     {
