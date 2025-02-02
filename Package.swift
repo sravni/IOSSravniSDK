@@ -7,7 +7,7 @@ let package = Package(
     name: "SravniSDK",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(name: "SravniSDK", targets: ["SravniSDK"])
