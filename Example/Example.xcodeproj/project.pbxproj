@@ -8,16 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C17CD2B58AA4F53ED671AD0E /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022363590F7613575C4D646A /* Pods_Example.framework */; };
-		F96C96422D3CB39300CAAFA7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F96C96412D3CB39300CAAFA7 /* SnapKit */; };
-		F96C97C72D3CCCD200CAAFA7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97C62D3CCCD200CAAFA7 /* Alamofire */; };
-		F96C97E42D3CCDF900CAAFA7 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97E32D3CCDF900CAAFA7 /* AnyCodable */; };
-		F96C97E72D3CCE1000CAAFA7 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97E62D3CCE1000CAAFA7 /* CryptoSwift */; };
-		F96C97EA2D3CCE2700CAAFA7 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97E92D3CCE2700CAAFA7 /* InputMask */; };
-		F96C97ED2D3CCE3C00CAAFA7 /* libwebp in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97EC2D3CCE3C00CAAFA7 /* libwebp */; };
-		F96C97F02D3CCE5A00CAAFA7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97EF2D3CCE5A00CAAFA7 /* Lottie */; };
-		F96C97F32D3CCE6F00CAAFA7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97F22D3CCE6F00CAAFA7 /* NVActivityIndicatorView */; };
-		F96C97F52D3CCE6F00CAAFA7 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97F42D3CCE6F00CAAFA7 /* NVActivityIndicatorViewExtended */; };
-		F96C98002D3CCEBE00CAAFA7 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = F96C97FF2D3CCEBE00CAAFA7 /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,16 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F96C97C72D3CCCD200CAAFA7 /* Alamofire in Frameworks */,
-				F96C96422D3CB39300CAAFA7 /* SnapKit in Frameworks */,
-				F96C97ED2D3CCE3C00CAAFA7 /* libwebp in Frameworks */,
-				F96C97F02D3CCE5A00CAAFA7 /* Lottie in Frameworks */,
-				F96C97E42D3CCDF900CAAFA7 /* AnyCodable in Frameworks */,
-				F96C97EA2D3CCE2700CAAFA7 /* InputMask in Frameworks */,
-				F96C98002D3CCEBE00CAAFA7 /* SocketIO in Frameworks */,
-				F96C97F32D3CCE6F00CAAFA7 /* NVActivityIndicatorView in Frameworks */,
-				F96C97F52D3CCE6F00CAAFA7 /* NVActivityIndicatorViewExtended in Frameworks */,
-				F96C97E72D3CCE1000CAAFA7 /* CryptoSwift in Frameworks */,
 				C17CD2B58AA4F53ED671AD0E /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,16 +109,6 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				F96C96412D3CB39300CAAFA7 /* SnapKit */,
-				F96C97C62D3CCCD200CAAFA7 /* Alamofire */,
-				F96C97E32D3CCDF900CAAFA7 /* AnyCodable */,
-				F96C97E62D3CCE1000CAAFA7 /* CryptoSwift */,
-				F96C97E92D3CCE2700CAAFA7 /* InputMask */,
-				F96C97EC2D3CCE3C00CAAFA7 /* libwebp */,
-				F96C97EF2D3CCE5A00CAAFA7 /* Lottie */,
-				F96C97F22D3CCE6F00CAAFA7 /* NVActivityIndicatorView */,
-				F96C97F42D3CCE6F00CAAFA7 /* NVActivityIndicatorViewExtended */,
-				F96C97FF2D3CCEBE00CAAFA7 /* SocketIO */,
 			);
 			productName = Example;
 			productReference = F97DF64F2CDDE99F0018EA73 /* Example.app */;
@@ -169,15 +139,6 @@
 			mainGroup = F97DF6462CDDE99F0018EA73;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F96C94D22D3A78E300CAAFA7 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				F96C97C52D3CCCD200CAAFA7 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				F96C97E22D3CCDF900CAAFA7 /* XCRemoteSwiftPackageReference "AnyCodable" */,
-				F96C97E52D3CCE1000CAAFA7 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				F96C97E82D3CCE2700CAAFA7 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
-				F96C97EB2D3CCE3C00CAAFA7 /* XCRemoteSwiftPackageReference "libwebp-Xcode" */,
-				F96C97EE2D3CCE5A00CAAFA7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				F96C97F12D3CCE6F00CAAFA7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F97DF6502CDDE99F0018EA73 /* Products */;
@@ -459,134 +420,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F96C94D22D3A78E300CAAFA7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				branch = 5.0.0;
-				kind = branch;
-			};
-		};
-		F96C97C52D3CCCD200CAAFA7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.0.0;
-			};
-		};
-		F96C97E22D3CCDF900CAAFA7 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sravni/AnyCodable";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
-			};
-		};
-		F96C97E52D3CCE1000CAAFA7 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.4;
-			};
-		};
-		F96C97E82D3CCE2700CAAFA7 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.3.2;
-			};
-		};
-		F96C97EB2D3CCE3C00CAAFA7 /* XCRemoteSwiftPackageReference "libwebp-Xcode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/libwebp-Xcode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.2;
-			};
-		};
-		F96C97EE2D3CCE5A00CAAFA7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.1;
-			};
-		};
-		F96C97F12D3CCE6F00CAAFA7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.0;
-			};
-		};
-		F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F96C96412D3CB39300CAAFA7 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C94D22D3A78E300CAAFA7 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		F96C97C62D3CCCD200CAAFA7 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97C52D3CCCD200CAAFA7 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		F96C97E32D3CCDF900CAAFA7 /* AnyCodable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97E22D3CCDF900CAAFA7 /* XCRemoteSwiftPackageReference "AnyCodable" */;
-			productName = AnyCodable;
-		};
-		F96C97E62D3CCE1000CAAFA7 /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97E52D3CCE1000CAAFA7 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
-		};
-		F96C97E92D3CCE2700CAAFA7 /* InputMask */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97E82D3CCE2700CAAFA7 /* XCRemoteSwiftPackageReference "input-mask-ios" */;
-			productName = InputMask;
-		};
-		F96C97EC2D3CCE3C00CAAFA7 /* libwebp */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97EB2D3CCE3C00CAAFA7 /* XCRemoteSwiftPackageReference "libwebp-Xcode" */;
-			productName = libwebp;
-		};
-		F96C97EF2D3CCE5A00CAAFA7 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97EE2D3CCE5A00CAAFA7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		F96C97F22D3CCE6F00CAAFA7 /* NVActivityIndicatorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97F12D3CCE6F00CAAFA7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
-			productName = NVActivityIndicatorView;
-		};
-		F96C97F42D3CCE6F00CAAFA7 /* NVActivityIndicatorViewExtended */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97F12D3CCE6F00CAAFA7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
-			productName = NVActivityIndicatorViewExtended;
-		};
-		F96C97FF2D3CCEBE00CAAFA7 /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F96C97FE2D3CCEBE00CAAFA7 /* XCRemoteSwiftPackageReference "socket" */;
-			productName = SocketIO;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F97DF6472CDDE99F0018EA73 /* Project object */;
 }
