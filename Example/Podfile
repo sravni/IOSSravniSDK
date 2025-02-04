@@ -3,7 +3,7 @@ source 'https://cdn.cocoapods.org/'
 
 project 'Example.xcodeproj'
 
-platform :ios, '14.0'
+platform :ios, '15.0'
 
 target 'Example' do
 
