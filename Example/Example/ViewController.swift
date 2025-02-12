@@ -3,33 +3,39 @@ import SravniSDK
 
 class ViewController: UIViewController {
 
-    var key = "mobile.frontend"
-    var phoneNumber = "70000000000"
+    var phoneNumber = "79633428349"
 
-    var sdkConfig = """
+    var userContext = """
     {
-        "productName": "mfo"
+        "productName": "credit-selection"
+    }
+    """
+
+    var productContext = """
+    {
+        "Sravni-Partner-Id": "mobile.frontend",
+        "Sravni-Partner-Name": "avito",
+        "Sravni-Partner-Product-Id": "11111"
     }
     """
 
     lazy var sdk = SravniManager(
-        configuration: .init(key: key, phoneNumber: phoneNumber, sdkConfig: sdkConfig.data(using: .utf8)!)
+        configuration: .init(phoneNumber: phoneNumber, userContext: userContext.data(using: .utf8)!, productContext: productContext)
     ) { [weak self] result in
         self?.statusLabel.textColor = result == .finished ? .systemGreen : .systemRed
         self?.statusLabel.text = "COMPLETION STATUS: \(result.description)"
     }
 
-    let keyBackgroundView = UIView()
     let phoneBackgroundView = UIView()
     let configBackgroundView = UIView()
+    let productBackgroundView = UIView()
 
     let startButton = UIButton(type: .custom)
-    let keyTextField = UITextField()
     let phoneTextField = UITextField()
     let configTextField = UITextField()
+    let productTextField = UITextField()
     let presentSwitch = UISwitch()
     let presentStyleLabel = UILabel()
-
     let statusLabel = UILabel()
 
     override func viewDidLoad() {
@@ -37,34 +43,19 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
 
         view.addSubview(presentSwitch)
-
         presentStyleLabel.text = "Presentation style"
         presentStyleLabel.textColor = .lightGray
         presentStyleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         view.addSubview(presentStyleLabel)
 
-        keyBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        keyBackgroundView.layer.cornerRadius = 12
-        view.addSubview(keyBackgroundView)
-
-        keyTextField.attributedPlaceholder = NSAttributedString(string: "SDK Key", attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)])
-        keyTextField.text = key
-        keyTextField.autocapitalizationType = .none
-        keyTextField.textColor = .black
-        keyTextField.font = .systemFont(ofSize: 16)
-        keyTextField.tag = 1
-        keyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        view.addSubview(keyTextField)
-
         phoneBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         phoneBackgroundView.layer.cornerRadius = 12
         view.addSubview(phoneBackgroundView)
 
-        configBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        configBackgroundView.layer.cornerRadius = 12
-        view.addSubview(configBackgroundView)
-
-        phoneTextField.attributedPlaceholder = NSAttributedString(string: "Phone number", attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)])
+        phoneTextField.attributedPlaceholder = NSAttributedString(
+            string: "Phone number",
+            attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)]
+        )
         phoneTextField.text = phoneNumber
         phoneTextField.autocapitalizationType = .none
         phoneTextField.keyboardType = .numberPad
@@ -74,8 +65,15 @@ class ViewController: UIViewController {
         phoneTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         view.addSubview(phoneTextField)
 
-        configTextField.attributedPlaceholder = NSAttributedString(string: "SDK Config", attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)])
-        configTextField.text = sdkConfig
+        configBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+        configBackgroundView.layer.cornerRadius = 12
+        view.addSubview(configBackgroundView)
+
+        configTextField.attributedPlaceholder = NSAttributedString(
+            string: "User Context",
+            attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)]
+        )
+        configTextField.text = userContext
         configTextField.autocapitalizationType = .none
         configTextField.textColor = .black
         configTextField.font = .systemFont(ofSize: 16)
@@ -83,8 +81,24 @@ class ViewController: UIViewController {
         configTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         view.addSubview(configTextField)
 
+        productBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
+        productBackgroundView.layer.cornerRadius = 12
+        view.addSubview(productBackgroundView)
+
+        productTextField.attributedPlaceholder = NSAttributedString(
+            string: "Product Context",
+            attributes: [.foregroundColor: UIColor.black.withAlphaComponent(0.3)]
+        )
+        productTextField.text = productContext
+        productTextField.autocapitalizationType = .none
+        productTextField.textColor = .black
+        productTextField.font = .systemFont(ofSize: 16)
+        productTextField.tag = 4
+        productTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        view.addSubview(productTextField)
+
         startButton.setTitle("Start SravniSDK", for: .normal)
-        startButton.backgroundColor = UIColor(red: 0, green: 175.0 / 255.0, blue: 1, alpha: 1)
+        startButton.backgroundColor = UIColor(red: 0, green: 175.0/255.0, blue: 1, alpha: 1)
         startButton.setTitleColor(.white, for: .normal)
         startButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
         startButton.layer.cornerRadius = 12
@@ -102,52 +116,57 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
+        let fieldWidth = view.bounds.width - 32
+        let fieldHeight: CGFloat = 60
+        let spacing: CGFloat = 16
+
         startButton.frame = CGRect(
             x: 16,
             y: view.bounds.midY - 28,
-            width: view.bounds.width - 32,
+            width: fieldWidth,
             height: 56
         )
-        statusLabel.frame = CGRect(
-            x: 16,
-            y: startButton.frame.origin.y + 56 + 16,
-            width: view.bounds.width - 32,
-            height: 30
-        )
 
-        phoneBackgroundView.frame = CGRect(
+        productBackgroundView.frame = CGRect(
             x: 16,
-            y: startButton.frame.origin.y - (60 + 16) * 2,
-            width: view.bounds.width - 32,
-            height: 60
+            y: startButton.frame.origin.y - spacing - fieldHeight,
+            width: fieldWidth,
+            height: fieldHeight
         )
-        phoneTextField.frame = phoneBackgroundView.frame.insetBy(dx: 8, dy: 8)
+        productTextField.frame = productBackgroundView.frame.insetBy(dx: 8, dy: 8)
 
         configBackgroundView.frame = CGRect(
             x: 16,
-            y: phoneBackgroundView.frame.maxY + 16,
-            width: view.bounds.width - 32,
-            height: 60
+            y: productBackgroundView.frame.origin.y - spacing - fieldHeight,
+            width: fieldWidth,
+            height: fieldHeight
         )
         configTextField.frame = configBackgroundView.frame.insetBy(dx: 8, dy: 8)
 
-        keyBackgroundView.frame = CGRect(
+        phoneBackgroundView.frame = CGRect(
             x: 16,
-            y: phoneBackgroundView.frame.origin.y - 60 - 16,
-            width: view.bounds.width - 32,
-            height: 60
+            y: configBackgroundView.frame.origin.y - spacing - fieldHeight,
+            width: fieldWidth,
+            height: fieldHeight
         )
-        keyTextField.frame = keyBackgroundView.frame.insetBy(dx: 8, dy: 8)
+        phoneTextField.frame = phoneBackgroundView.frame.insetBy(dx: 8, dy: 8)
 
         presentSwitch.frame = CGRect(
-            x: keyBackgroundView.frame.origin.x,
-            y: keyBackgroundView.frame.origin.y - 40,
+            x: phoneBackgroundView.frame.origin.x,
+            y: phoneBackgroundView.frame.origin.y - 40,
             width: presentSwitch.bounds.width,
             height: presentSwitch.bounds.height
         )
         presentStyleLabel.sizeToFit()
         presentStyleLabel.center = presentSwitch.center
         presentStyleLabel.frame.origin.x += presentSwitch.bounds.width + 55
+
+        statusLabel.frame = CGRect(
+            x: 16,
+            y: startButton.frame.maxY + spacing,
+            width: fieldWidth,
+            height: 30
+        )
     }
 
     @objc
@@ -164,15 +183,15 @@ class ViewController: UIViewController {
     @objc
     func textFieldDidChange(_ textField: UITextField) {
         switch textField.tag {
-        case 1:
-            key = textField.text ?? ""
         case 2:
             phoneNumber = textField.text ?? ""
         case 3:
-            sdkConfig = textField.text ?? ""
-            if let data = sdkConfig.data(using: .utf8) {
+            userContext = textField.text ?? ""
+            if let data = userContext.data(using: .utf8) {
                 sdk.updateConfig(data)
             }
+        case 4:
+            productContext = textField.text ?? ""
         default:
             break
         }
