@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     lazy var sdk = SravniManager(
         configuration: .init(phoneNumber: phoneNumber, userContext: userContext.data(using: .utf8)!, productContext: productContext)
     ) { [weak self] result in
-        self?.statusLabel.textColor = result == .finished ? .systemGreen : .systemRed
-        self?.statusLabel.text = "COMPLETION STATUS: \(result.description)"
+        self?.statusLabel.textColor = .systemGreen
+        self?.statusLabel.text = "COMPLETION STATUS: \(result)"
     }
 
     let phoneBackgroundView = UIView()
