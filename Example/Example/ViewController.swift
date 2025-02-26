@@ -192,6 +192,7 @@ class ViewController: UIViewController {
             }
         case 4:
             productContext = textField.text ?? ""
+            sdk.updateProductContext(productContext)
         default:
             break
         }
